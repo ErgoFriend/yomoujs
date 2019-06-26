@@ -1,0 +1,19 @@
+{
+  "name": "yomoujs",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.4000"
+  },
+  "dependencies": {
+    "ky": "^0.11.1"
+  }
+}
