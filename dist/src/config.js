@@ -1,5 +1,6 @@
-const base_url = "https://api.syosetu.com/novelapi/api/?libtype=2"
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const base_url = "https://api.syosetu.com/novelapi/api/?libtype=2";
 const default_search = {
     biggenre: {
         biggenre: [],
@@ -13,8 +14,7 @@ const default_search = {
         word: [],
         notword: []
     }
-}
-
+};
 const bigGenre = [
     {
         number: 1,
@@ -40,8 +40,7 @@ const bigGenre = [
         number: 99,
         word: "ノンジャンル"
     },
-]
-
+];
 const Genre = [
     {
         number: 101,
@@ -127,16 +126,11 @@ const Genre = [
         number: 9801,
         word: "ノンジャンル"
     },
-]
-
+];
 const config = {
     base_url: base_url,
     default_search: default_search,
     bigGenre: bigGenre,
     Genre: Genre
-}
-
-
-export {
-    config
-}
+};
+exports.config = config;

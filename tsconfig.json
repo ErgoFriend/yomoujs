@@ -2,6 +2,7 @@
     "compilerOptions": {
       "target": "esnext",
       "module": "commonjs",
+      "lib": [ "es2015" ],
       "moduleResolution": "node",
       "strict": true,
       "skipLibCheck": true,

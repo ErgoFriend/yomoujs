@@ -2,18 +2,28 @@
   "name": "yomoujs",
   "version": "0.0.1",
   "main": "dist/index.js",
+  "author": "ErgoFriend",
   "license": "MIT",
   "files": [
     "dist"
   ],
   "scripts": {
+    "test": "./node_modules/.bin/mocha -r ts-node/register 'test/**/*.ts'",
     "build": "tsc",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "typescript": "^3.3.4000"
+    "typescript": "^3.5.2",
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "ts-node": "^8.3.0"
   },
   "dependencies": {
-    "ky": "^0.11.1"
+    "@types/js-yaml": "^3.12.1",
+    "@types/node-fetch": "^2.3.7",
+    "js-yaml": "^3.13.1",
+    "node-fetch": "^2.6.0"
   }
 }

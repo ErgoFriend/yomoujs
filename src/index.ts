@@ -1,13 +1,7 @@
-export const name = 'name'
-export * from './hoge'
-export * from './ihoge'
+import {pickup} from './pickup'
 
-function hi(name: string) {
-    console.log(`Hello ${name}`);
+export default class yomou {
+    Pickup(){
+        pickup()
+    }
 }
-
-function Search(config: object) {
-    
-}
-  
-export default hi;

@@ -1,3 +1,10 @@
+import {config} from "./config"
+
+export {
+    CreateGenreQuery,
+    GetGenre
+}
+
 interface Genre {
     big_genre: Array<number>,
     not_big_genre: Array<number>,
@@ -9,8 +16,14 @@ function CreateGenreQuery(data: Genre): string {
     return "&biggenre=" + data.big_genre.join("-") + "&notbiggenre=" + data.not_big_genre.join("-") + "&genre=" + data.genre.join("-") + "&notgenre=" + data.not_genre.join("-")
 }
 
+function GetGenre(): object {
+    return {
+        bigGenre: config.bigGenre,
+        Genre: config.Genre
+    }
+}
 // 大ジャンル
-function BigGenreName(number: number): string {
+export function BigGenreName(number: number): string {
     let big_genre_name
     switch (number) {
         case 1: //code block statement1;
@@ -38,7 +51,7 @@ function BigGenreName(number: number): string {
     return big_genre_name
 }
 
-function BigGenreNumber(string: string): number {
+export function BigGenreNumber(string: string): number {
     let big_genre_number
     switch (string) {
         case "恋愛": //code block statement1;
@@ -67,7 +80,7 @@ function BigGenreNumber(string: string): number {
 }
 
 //ジャンル
-function GenreName(number: number): string {
+export function GenreName(number: number): string {
     let genre_name
     switch (number) {
     //  恋愛
@@ -97,13 +110,13 @@ function GenreName(number: number): string {
         case 304:
             genre_name = "推理"
             break;
-        case 304:
+        case 305:
             genre_name = "ホラー"
             break;
-        case 305:
+        case 306:
             genre_name = "アクション"
             break;
-        case 306:
+        case 307:
             genre_name = "コメディー"
             break;
     //  SF
@@ -132,8 +145,11 @@ function GenreName(number: number): string {
         case 9904:
             genre_name = "リプレイ"
             break;
-    //  ノンジャンルs
         case 9999:
+            genre_name = "その他"
+            break;
+    //  ノンジャンル
+        case 9801:
             genre_name = "ノンジャンル"
             break;
         default:
@@ -142,7 +158,7 @@ function GenreName(number: number): string {
     return genre_name
 }
 
-function GenreNumber(string: string): number {
+export function GenreNumber(string: string): number {
     let genre_number
     switch (string) {
         //  恋愛
@@ -207,12 +223,15 @@ function GenreNumber(string: string): number {
             case "リプレイ":
                 genre_number = 9904
                 break;
-        //  ノンジャンルs
-            case "ノンジャンル":
+            case "その他":
                 genre_number = 9999
                 break;
+        //  ノンジャンル
+            case "ノンジャンル":
+                genre_number = 9801
+                break;
             default:
-                genre_number = 9999
+                genre_number = 9801
         }
     return genre_number
 }
