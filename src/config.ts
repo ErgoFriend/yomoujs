@@ -1,46 +1,40 @@
 const base_url = "https://api.syosetu.com/novelapi/api/?libtype=2"
 
-const default_search = {
-    biggenre: {
-        biggenre: [],
-        notbiggenre: []
-    },
-    subcategory: {
-        subcategory: [],
-        notsubcategory: []
-    },
-    word: {
-        word: [],
-        notword: []
-    }
+const bigGenreStr = {
+    1: "恋愛",
+    2: "ファンタジー",
+    3: "文芸",
+    4: "SF",
+    98: "その他",
+    99: "ノンジャンル"
 }
 
-const bigGenre = [
-    {
-        number: 1,
-        word: "恋愛"
-    },
-    {
-        number: 2,
-        word: "ファンタジー"
-    },
-    {
-        number: 3,
-        word: "文芸"
-    },
-    {
-        number: 4,
-        word: "SF"
-    },
-    {
-        number: 98,
-        word: "その他"
-    },
-    {
-        number: 99,
-        word: "ノンジャンル"
-    },
-]
+const bigGenreNum = {
+    "恋愛": 1,
+    "ファンタジー": 2,
+    "文芸": 3,
+    "SF": 4,
+    "その他": 98,
+    "ノンジャンル": 99
+}
+
+const GenreStr = {
+    1: "恋愛",
+    2: "ファンタジー",
+    3: "文芸",
+    4: "SF",
+    98: "その他",
+    99: "ノンジャンル"
+}
+
+const GenreNum = {
+    "恋愛": 1,
+    "ファンタジー": 2,
+    "文芸": 3,
+    "SF": 4,
+    "その他": 98,
+    "ノンジャンル": 99
+}
 
 const Genre = [
     {
