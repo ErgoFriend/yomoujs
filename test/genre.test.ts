@@ -1,16 +1,21 @@
 import { describe, it } from "mocha";
-import { BigGenreName, BigGenreNumber } from '../src/genre';
+import * as yomou from "../src/index";
 import { assert } from "chai"
 
 describe('genre', () => {
-    describe('BigGenreName(number: number)', () => {
-        it('1 => 恋愛', () => { assert.equal(BigGenreName(1), "恋愛"); });
-        it('3 => 文芸', () => { assert.equal(BigGenreName(3), "文芸"); });
-        it('23 => 未分類', () => { assert.equal(BigGenreName(23), "未分類"); });
-    })
-    describe('BigGenreNumber(string: string)', () => {
-        it('文芸 => 3', () => { assert.equal(BigGenreNumber("文芸"), 3); });
-        it('ノンジャンル => 99', () => { assert.equal(BigGenreNumber("ノンジャンル"), 99); });
-        it('あかさたな => 99', () => { assert.equal(BigGenreNumber("あかさたな"), 99); });
+    const query = {
+        big_genre: [1,2],
+        not_big_genre: [3,4],
+        genre: [5,6],
+        not_genre: [7,8],
+    };
+    describe('CreateGenreQuery', () => {
+        console.log('query:',JSON.stringify(query).substring(1,35),"...")
+        it('CreateGenreQuery(query)', () => {
+            assert.equal(
+                yomou.CreateGenreQuery(query),
+                "&biggenre=1-2&notbiggenre=3-4&genre=5-6&notgenre=7-8"
+            )}
+        );
     })
 })

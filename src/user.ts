@@ -1,22 +1,24 @@
 import fetch from 'node-fetch'
-import * as yaml from 'js-yaml'
 
-function getUser(id: string): object {
-    return fetch('https://api.syosetu.com/novelapi/api/?libtype=2&')
-        .then(res => res.text())
-        .then(body => yaml.safeLoad(body))
-        .then(json => json)
-        .catch(function (err) {
-            err
-        });
+export {
+    getUserName,
+    getUser
 }
 
-export default class User {
-    id: string;
-    name: string;
-
-    constructor(public id: string) {
-        this.id = id;
-
+function getUserName(user: string): string {
+    let result2:string[]|null = user.match(/ユーザネーム<\/dt>\n<dd>([\s\S]*?)<\/dd>/i);
+    if (result2){
+      return result2 !== null ? result2[1] : ""
     }
+    return ""
 }
+
+async function getUser(id: string|number): Promise<string> {
+  const data =  await fetch('https://mypage.syosetu.com/'+id)
+  .then(res => res.text())
+  .then(data => data.match(/<dl class="profile">[\s\S]*?<\/dl>/i))
+  .then(result => result !== null ? result[0] : "")
+  return data
+}
+
+//getUser(531083).then(data => console.log(getUserName(data)))

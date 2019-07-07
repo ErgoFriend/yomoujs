@@ -1,11 +1,5 @@
-import fetch from 'node-fetch'
-import * as yaml from 'js-yaml'
-
-export {
-    Pickup,
-}
-
-type Pickup = Syousetu[];
+export { Pickup, };
+declare type Pickup = Syousetu[];
 interface Syousetu {
     allcount?: number;
     title?: string;
@@ -42,13 +36,4 @@ interface Syousetu {
     novelupdated_at?: string;
     updated_at?: string;
 }
- 
-async function Pickup(ispickup: number = 1, order: string = "hyoka",limit: number = 200): Promise<Pickup> {
-    return await fetch('https://api.syosetu.com/novelapi/api/?libtype=2&ispickup='+ispickup+'&order='+order+'&lim='+limit)
-        .then(res => res.text())
-        .then(body => yaml.safeLoad(body))
-        .then(json => json)
-        .catch(function (err) {
-            err
-        });
-}
+declare function Pickup(ispickup?: number, order?: string, limit?: number): Promise<Pickup>;

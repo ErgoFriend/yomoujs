@@ -1,24 +1,23 @@
-export const base_url = "https://api.syosetu.com/novelapi/api/?libtype=2"
-
-export const bigGenreStr = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.base_url = "https://api.syosetu.com/novelapi/api/?libtype=2";
+exports.bigGenreStr = {
     1: "恋愛",
     2: "ファンタジー",
     3: "文芸",
     4: "SF",
     98: "その他",
     99: "ノンジャンル"
-}
-
-export const bigGenreNum = {
+};
+exports.bigGenreNum = {
     "恋愛": 1,
     "ファンタジー": 2,
     "文芸": 3,
     "SF": 4,
     "その他": 98,
     "ノンジャンル": 99
-}
-
-export const GenreStr = {
+};
+exports.GenreStr = {
     101: "異世界",
     102: "現実世界",
     201: "ハイファンタジー",
@@ -40,9 +39,8 @@ export const GenreStr = {
     9903: "エッセイ",
     9904: "リプレイ",
     9999: "その他"
-}
-
-export const GenreNum = {
+};
+exports.GenreNum = {
     "異世界": 101,
     "現実世界": 102,
     "ハイファンタジー": 201,
@@ -63,9 +61,8 @@ export const GenreNum = {
     "エッセイ": 9902,
     "リプレイ": 9904,
     "その他": 9999
-}
-
-export const Order = [
+};
+exports.Order = [
     {
         key: 'new',
         value: '新着更新順'
@@ -118,4 +115,4 @@ export const Order = [
         key: 'old',
         value: '更新が古い順'
     }
-]
+];

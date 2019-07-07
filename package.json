@@ -1,9 +1,14 @@
 {
   "name": "yomoujs",
   "version": "0.0.1",
+  "description": "小説家になろう API ライブラリ",
   "main": "dist/index.js",
   "author": "ErgoFriend",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ErgoFriend/yomoujs/issues"
+  },
+  "homepage": "https://github.com/ErgoFriend/yomoujs",
   "files": [
     "dist"
   ],
@@ -13,16 +18,17 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "typescript": "^3.5.2",
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
-    "ts-node": "^8.3.0"
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.2"
   },
   "dependencies": {
     "@types/js-yaml": "^3.12.1",
     "@types/node-fetch": "^2.3.7",
+    "axios": "^0.19.0",
     "js-yaml": "^3.13.1",
     "node-fetch": "^2.6.0"
   }

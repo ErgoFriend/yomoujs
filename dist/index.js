@@ -1,6 +1,10 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-function hi(name) {
-    console.log(`Hello ${name}`);
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-exports.default = hi;
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(require("./pickup"));
+__export(require("./genre"));
+__export(require("./config"));
+__export(require("./user"));
+__export(require("./syousetu"));

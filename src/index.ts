@@ -1,7 +1,5 @@
-import {pickup} from './pickup'
-
-export default class yomou {
-    Pickup(){
-        pickup()
-    }
-}
+export * from './pickup'
+export * from './genre'
+export * from './config'
+export * from './user'
+export * from './syousetu'
