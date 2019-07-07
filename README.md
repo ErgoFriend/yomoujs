@@ -1,4 +1,6 @@
 # yomoujs
+[![Build Status](https://travis-ci.com/ErgoFriend/yomoujs.svg?branch=master)](https://travis-ci.com/ErgoFriend/yomoujs)
+
 小説家になろう API ライブラリ
 
 ## Usage
