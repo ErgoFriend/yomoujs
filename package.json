@@ -1,6 +1,6 @@
 {
   "name": "yomoujs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "小説家になろう API ライブラリ",
   "main": "dist/index.js",
   "author": "ErgoFriend",
@@ -9,7 +9,15 @@
     "url": "https://github.com/ErgoFriend/yomoujs/issues"
   },
   "homepage": "https://github.com/ErgoFriend/yomoujs",
-  "keywords": ["syosetu.com", "syosetu", "narou", "yomou", "yomoujs", "小説家になろう", "小説家を読もう"],
+  "keywords": [
+    "syosetu.com",
+    "syosetu",
+    "narou",
+    "yomou",
+    "yomoujs",
+    "小説家になろう",
+    "小説家を読もう"
+  ],
   "files": [
     "dist"
   ],
