@@ -1,4 +1,4 @@
-export { Pickup, };
+export { Pickup };
 declare type Pickup = Syousetu[];
 interface Syousetu {
     allcount?: number;

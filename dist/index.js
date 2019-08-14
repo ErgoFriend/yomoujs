@@ -7,4 +7,4 @@ __export(require("./pickup"));
 __export(require("./genre"));
 __export(require("./config"));
 __export(require("./user"));
-__export(require("./syousetu"));
+__export(require("./novel"));

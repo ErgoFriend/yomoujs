@@ -1,3 +1,3 @@
-export { getUserName, getUser };
-declare function getUserName(user: string): string;
-declare function getUser(id: string | number): Promise<string>;
+import { Writer } from "./generated/graphql";
+export { getUser };
+declare const getUser: (id: string) => Promise<Writer>;
