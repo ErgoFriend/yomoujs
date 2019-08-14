@@ -37,7 +37,13 @@ class Syousetu {
     }
 }
 async function getSyousetu(id) {
-    const res = await axios_1.default.get('https://api.syosetu.com/novelapi/api/?libtype=2&out=json&ncode=' + id);
+    const res = await axios_1.default.get("https://api.syosetu.com/novelapi/api/?libtype=2&out=json&ncode=" + id, {
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*"
+        },
+        data: {}
+    });
     return new Syousetu(res.data[1]);
 }
 exports.getSyousetu = getSyousetu;
