@@ -1,6 +1,6 @@
 {
   "name": "yomoujs",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "小説家になろう API ライブラリ",
   "main": "dist/index.js",
   "author": "ErgoFriend",
