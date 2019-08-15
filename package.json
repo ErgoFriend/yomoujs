@@ -16,7 +16,8 @@
     "yomou",
     "yomoujs",
     "小説家になろう",
-    "小説家を読もう"
+    "小説家を読もう",
+    "typescript"
   ],
   "files": [
     "dist"
