@@ -9,6 +9,9 @@
     "url": "https://github.com/ErgoFriend/yomoujs/issues"
   },
   "homepage": "https://github.com/ErgoFriend/yomoujs",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "keywords": [
     "syosetu.com",
     "syosetu",
